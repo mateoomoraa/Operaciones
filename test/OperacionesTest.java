@@ -57,6 +57,7 @@ public class OperacionesTest {
     }
 
     @Test
+    @Ignore
     public void testRango2() {
         System.out.println("rango");
 
@@ -75,17 +76,35 @@ public class OperacionesTest {
      * Test of sumRango method, of class Operaciones.
      */
     @Test
-    @Ignore
     public void testSumRango() {
         System.out.println("sumRango");
-        int a = 0;
-        int b = 0;
+        
         Operaciones instance = new Operaciones();
-        int expResult = 0;
+        
+        int a = 1;
+        int b = 5;
         int result = instance.sumRango(a, b);
+        
+        int expResult = 15;
+        
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+    }
+    
+    @Test
+    public void testSumRango2() {
+        System.out.println("sumRango");
+        
+        Operaciones instance = new Operaciones();
+        
+        int a = 5;
+        int b = 1;
+        int result = instance.sumRango(a, b);
+        
+        int expResult = 15;
+        
+        assertEquals(expResult, result);
+        
     }
 
     /**
