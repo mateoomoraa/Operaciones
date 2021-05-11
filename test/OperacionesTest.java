@@ -17,22 +17,22 @@ import org.junit.Ignore;
  * @author CES
  */
 public class OperacionesTest {
-    
+
     public OperacionesTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -44,34 +44,31 @@ public class OperacionesTest {
     @Ignore
     public void testRango() {
         System.out.println("rango");
-        
+
         Operaciones instance = new Operaciones();
-        
+
         int a = 1;
         int b = 5;
         int[] result = instance.rango(a, b);
-        
-        int[] expResult = {1,2,3,4,5};
-        
+
+        int[] expResult = {1, 2, 3, 4, 5};
         assertArrayEquals(expResult, result);
-       
-        
+
     }
+
     @Test
-    public void testRango2(){
+    public void testRango2() {
         System.out.println("rango");
-        
+
         Operaciones instance = new Operaciones();
-        
+
         int a = 5;
         int b = 1;
         int[] result = instance.rango(a, b);
-        
-        int[] expResult = {1,2,3,4,5};
-        
+
+        int[] expResult = {1, 2, 3, 4, 5};
         assertArrayEquals(expResult, result);
-        
-        
+
     }
 
     /**
@@ -122,5 +119,5 @@ public class OperacionesTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-    
+
 }
