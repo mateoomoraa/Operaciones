@@ -113,6 +113,7 @@ public class OperacionesTest {
      * Test of isPar method, of class Operaciones.
      */
     @Test
+    @Ignore
     public void testIsPar() {
         System.out.println("isPar");
 
@@ -125,8 +126,9 @@ public class OperacionesTest {
         assertEquals(expResult, result);
 
     }
-    
+
     @Test
+    @Ignore
     public void testIsPar2() {
         System.out.println("isPar2");
 
@@ -139,9 +141,10 @@ public class OperacionesTest {
         assertEquals(expResult, result);
 
     }
-    
-    @Test(expected=IllegalArgumentException.class )
-    public void testIsPar3(){
+
+    @Test(expected = IllegalArgumentException.class)
+    @Ignore
+    public void testIsPar3() {
         System.out.println("isPar3");
 
         Operaciones instance = new Operaciones();
@@ -149,23 +152,47 @@ public class OperacionesTest {
         int a = 0;
         boolean result = instance.isPar(a);
 
-       
     }
 
     /**
      * Test of extraerPositivos method, of class Operaciones.
      */
+    
     @Test
-    @Ignore
     public void testExtraerPositivos() {
         System.out.println("extraerPositivos");
-        int[] nums = null;
+
         Operaciones instance = new Operaciones();
-        int[] expResult = null;
+        int[] nums = {1,2,5,-4,-9,-8,-6};
         int[] result = instance.extraerPositivos(nums);
+
+        int[] expResult = {1,2,5};
         assertArrayEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
+    
+    @Test(expected= IllegalArgumentException.class)
+    public void testExtraerPositivos2() {
+        System.out.println("extraerPositivos");
+
+        Operaciones instance = new Operaciones();
+        int[] nums = null;
+        int[] result = instance.extraerPositivos(nums);
+        
+    }
+    
+    @Test
+    public void testExtraerPositivos3() {
+        System.out.println("extraerPositivos");
+
+        Operaciones instance = new Operaciones();
+        int[] nums = {};
+        int[] result = instance.extraerPositivos(nums);
+
+        int[] expResult = {};
+        assertArrayEquals(expResult, result);
+        
+    }
+    
 
 }
