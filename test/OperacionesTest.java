@@ -76,51 +76,80 @@ public class OperacionesTest {
      * Test of sumRango method, of class Operaciones.
      */
     @Test
+    @Ignore
     public void testSumRango() {
         System.out.println("sumRango");
-        
+
         Operaciones instance = new Operaciones();
-        
+
         int a = 1;
         int b = 5;
         int result = instance.sumRango(a, b);
-        
+
         int expResult = 15;
-        
+
         assertEquals(expResult, result);
-        
+
     }
-    
+
     @Test
+    @Ignore
     public void testSumRango2() {
         System.out.println("sumRango");
-        
+
         Operaciones instance = new Operaciones();
-        
+
         int a = 5;
         int b = 1;
         int result = instance.sumRango(a, b);
-        
+
         int expResult = 15;
-        
+
         assertEquals(expResult, result);
-        
+
     }
 
     /**
      * Test of isPar method, of class Operaciones.
      */
     @Test
-    @Ignore
     public void testIsPar() {
         System.out.println("isPar");
-        int a = 0;
+
         Operaciones instance = new Operaciones();
-        boolean expResult = false;
+
+        int a = 2;
         boolean result = instance.isPar(a);
+
+        boolean expResult = true;
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
+    }
+    
+    @Test
+    public void testIsPar2() {
+        System.out.println("isPar2");
+
+        Operaciones instance = new Operaciones();
+
+        int a = 3;
+        boolean result = instance.isPar(a);
+
+        boolean expResult = false;
+        assertEquals(expResult, result);
+
+    }
+    
+    @Test(expected=IllegalArgumentException.class )
+    public void testIsPar3(){
+        System.out.println("isPar3");
+
+        Operaciones instance = new Operaciones();
+
+        int a = 0;
+        boolean result = instance.isPar(a);
+
+       
     }
 
     /**
