@@ -149,7 +149,7 @@ public class OperacionesTest {
 
         Operaciones instance = new Operaciones();
 
-        int a = 0;
+        int a = -4;
         boolean result = instance.isPar(a);
 
     }
@@ -193,6 +193,8 @@ public class OperacionesTest {
         assertArrayEquals(expResult, result);
         
     }
+
+
     
 
 }
