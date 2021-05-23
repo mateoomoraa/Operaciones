@@ -153,12 +153,25 @@ public class OperacionesTest {
         boolean result = instance.isPar(a);
 
     }
+    
+     @Test(expected = IllegalArgumentException.class)
+    
+    public void testIsPar4() {
+        System.out.println("isPar4");
+
+        Operaciones instance = new Operaciones();
+
+        int a = 0;
+        boolean result = instance.isPar(a);
+
+    }
 
     /**
      * Test of extraerPositivos method, of class Operaciones.
      */
     
     @Test
+    @Ignore
     public void testExtraerPositivos() {
         System.out.println("extraerPositivos");
 
@@ -172,6 +185,7 @@ public class OperacionesTest {
     }
     
     @Test(expected= IllegalArgumentException.class)
+    @Ignore
     public void testExtraerPositivos2() {
         System.out.println("extraerPositivos");
 
@@ -182,6 +196,7 @@ public class OperacionesTest {
     }
     
     @Test
+    @Ignore
     public void testExtraerPositivos3() {
         System.out.println("extraerPositivos");
 
